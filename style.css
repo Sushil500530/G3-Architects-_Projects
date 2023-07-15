@@ -6,6 +6,10 @@
     box-sizing: border-box;
     font-family: 'Work Sans', sans-serif;
 }
+
+.text-light-gray{
+    color: #727272;
+}
         /* header styles */
     header{
         background-color:rgba(255, 144, 14, 0.10) ;
@@ -50,9 +54,7 @@
         font-weight: 700;
         color: #131313;
     }
-    .banner-description{
-        color: #727272;
-    }
+  
     .btn-primary{
         padding: 15px 22px;
         background-color:#FF900E ;
@@ -71,30 +73,7 @@
     }
     .banner img{
         width: 100%;
-    }
-
-        /* responsive styles */
-        /* mobile devices */
-    @media screen and (max-width:576px) {
-        /* header section  */
-        header, nav, nav ul{
-            padding: 20px;
-            flex-direction: column;
-            gap: 8px;
-        }
-        nav li a {
-            margin: 8px 0;
-        }
-    }
-
-    /* desktop devices */
-    @media screen and (min-width:577px) and (max-width:960px) {
-        header{
-            padding: 20px;
-        }
-        nav{
-            flex-direction: column;
-        }
+        margin-top: 20px;
     }
 
             /* main styles */
@@ -120,6 +99,7 @@
     }
     .teams-content-heading{
         font-size: 3rem;
+        padding: 15px 0;
     }
     .first-descr{
         color: #727272;
@@ -134,5 +114,62 @@
         font-weight:700 ;
     }
     .teams-content-description{
-        
+        color:#131313;
+        font-size: 1rem;
     }
+
+    /* responsive media quary */
+
+
+
+
+
+
+
+
+
+
+            /* responsive styles */
+        /* mobile devices */
+        @media screen and (max-width:576px) {
+            /* header section  */
+            header, nav, nav ul{
+                padding: 20px;
+                flex-direction: column;
+                gap: 8px;
+            }
+            nav li a {
+                margin: 8px 0;
+            }
+            .teams-image-container{
+                grid-template-columns: 1fr;
+            }
+            .teams-container{
+                flex-direction: column;
+                
+            }
+            .teams-content{
+                padding: 20px 76px;
+            }
+        }
+    
+        /* desktop devices */
+        @media screen and (min-width:577px) and (max-width:960px) {
+            header{
+                padding: 20px;
+            }
+            nav{
+                flex-direction: column;
+            }
+            .teams-image-container{
+                grid-template-columns: 1fr;
+            }
+            .teams-container{
+                flex-direction: column;
+                
+            }
+            .teams-image-container{
+                grid-template-columns: 1fr 1fr;
+                padding: 20px;
+            }
+        }
